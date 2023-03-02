@@ -24,11 +24,11 @@ do{
 console.log(`il player scommette sul ${userChoice} e punta sul numero ${userNumber}`);
 console.log(`il computer punta sul numero ${computerNumber}`);
 
-sumTwoNumbers(userNumber, computerNumber);
+let total = sumTwoNumbers(userNumber, computerNumber);
 
-//console.log(`la somma dei numeri giocati è: ${parseInt(sumTwoNumbers())}`);
+console.log(`la somma dei numeri giocati è: ${total}`);
 
-if(evenOdd(sumTwoNumbers()) == userChoice){
+if(evenOdd(total) == userChoice){
     console.log('Hai vinto!')
 }else{
     console.log('hai perso..vince il pc, RIPROVA!')
