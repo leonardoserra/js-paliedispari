@@ -9,13 +9,15 @@
         dispari (usando una funzione)
         Dichiariamo chi ha vinto.
 */
+const computerNumber = randomNumber(1, 5);
 let userChoice = prompt("Scegli fra pari o dispari:");
-let computerNumber = randomNumber(1, 5);
 let userNumber;
 
 // do{
 //     userChoice = prompt("Scegli fra pari o dispari:");
-// }while(!(userChoice === 'pari') || !(userChoice === 'dispari'));
+// }while(userChoice != "pari" || userChoice != "dispari");
+
+// qui sopra..non mi funziona e non capisco perchè...
 
 do{
     userNumber = parseInt(prompt("digita un numero da 1 a 5:"));
