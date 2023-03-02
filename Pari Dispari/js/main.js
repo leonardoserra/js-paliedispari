@@ -10,14 +10,18 @@
         Dichiariamo chi ha vinto.
 */
 const computerNumber = randomNumber(1, 5);
-let userChoice = prompt("Scegli fra pari o dispari:");
+let userChoice;// = prompt("Scegli fra pari o dispari:");
 let userNumber;
 
-// do{
-//     userChoice = prompt("Scegli fra pari o dispari:");
-// }while(userChoice != "pari" || userChoice != "dispari");
 
-// qui sopra..non mi funziona e non capisco perchè...
+let state = true;
+do{
+    userChoice = prompt("Scegli fra pari o dispari:");
+    if(userChoice == 'pari' || userChoice == 'dispari'){
+        state = false;
+    }
+}while(state);
+
 
 do{
     userNumber = parseInt(prompt("digita un numero da 1 a 5:"));
