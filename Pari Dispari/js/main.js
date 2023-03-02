@@ -9,10 +9,21 @@
         dispari (usando una funzione)
         Dichiariamo chi ha vinto.
 */
-
-const userChoice = prompt("Scegli fra pari o dispari:");
+let userChoice = prompt("Scegli fra pari o dispari:");
+let computerNumber = randomNumber(1, 5);
 let userNumber;
+
+// do{
+//     userChoice = prompt("Scegli fra pari o dispari:");
+// }while(!(userChoice === "pari") || !(userChoice === "dispari"));
 
 do{
     userNumber = parseInt(prompt("digita un numero da 1 a 5:"));
-}while(isNaN(userNumber));
+}while(isNaN(userNumber) || userNumber < 1 || userNumber > 5);
+
+
+function randomNumber(min, max){
+    generatedNumber = Math.floor(Math.random() * (max - min)) + min;
+    return generatedNumber;
+}
+console.log(computerNumber);
