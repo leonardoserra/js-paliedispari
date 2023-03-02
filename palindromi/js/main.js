@@ -17,14 +17,14 @@ function isItPalindrom (word){
 
     for(i = 0; i < word.length; i++){
 
-        defaultWord += word[i];
+        defaultWord += word[i].trim();
         console.log('default: ' + defaultWord);
         
     }
 
     for(i = word.length - 1 ; i >= 0; i--){
 
-        reverseWord += word[i];
+        reverseWord += word[i].trim();
         console.log('reverse: ' + reverseWord)
     }
 
