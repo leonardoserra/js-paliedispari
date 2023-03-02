@@ -15,15 +15,48 @@ let userNumber;
 
 // do{
 //     userChoice = prompt("Scegli fra pari o dispari:");
-// }while(!(userChoice === "pari") || !(userChoice === "dispari"));
+// }while(!(userChoice === 'pari') || !(userChoice === 'dispari'));
 
 do{
     userNumber = parseInt(prompt("digita un numero da 1 a 5:"));
 }while(isNaN(userNumber) || userNumber < 1 || userNumber > 5);
 
+console.log(`il player scommette sul ${userChoice} e punta sul numero ${userNumber}`);
+console.log(`il computer punta sul numero ${computerNumber}`);
+
+sumTwoNumbers(userNumber, computerNumber);
+
+//console.log(`la somma dei numeri giocati è: ${parseInt(sumTwoNumbers())}`);
+
+if(evenOdd(sumTwoNumbers()) == userChoice){
+    console.log('Hai vinto!')
+}else{
+    console.log('hai perso..vince il pc, RIPROVA!')
+}
+
+
+////////    Functions    ///////// 
+
 
 function randomNumber(min, max){
-    generatedNumber = Math.floor(Math.random() * (max - min)) + min;
+
+    const generatedNumber = Math.floor(Math.random() * (max - min)) + min;
     return generatedNumber;
+
 }
-console.log(computerNumber);
+
+function sumTwoNumbers(n1, n2){
+
+    const sum = n1 + n2;
+    return sum;
+
+}
+
+function evenOdd(number){
+    let result;
+    if(number % 2 === 0){
+        return result = "pari";
+    }else{
+        return result = "dispari";
+    }
+}
