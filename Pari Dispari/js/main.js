@@ -9,3 +9,10 @@
         dispari (usando una funzione)
         Dichiariamo chi ha vinto.
 */
+
+const userChoice = prompt("Scegli fra pari o dispari:");
+let userNumber;
+
+do{
+    userNumber = parseInt(prompt("digita un numero da 1 a 5:"));
+}while(isNaN(userNumber));
