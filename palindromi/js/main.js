@@ -12,8 +12,15 @@ console.log(result);
 
 function isItPalindrom (word){
 
-
+    let defaultWord = "";
     let reverseWord = "";
+
+    for(i = 0; i < word.length; i++){
+
+        defaultWord += word[i].trimStart();
+        console.log('default: ' + defaultWord);
+        
+    }
 
     for(i = word.length - 1 ; i >= 0; i--){
 
@@ -21,7 +28,7 @@ function isItPalindrom (word){
         console.log('reverse: ' + reverseWord)
     }
 
-    if(word == reverseWord){
+    if(defaultWord == reverseWord){
         return "la parola che hai scelto è palindroma";
     } else{
         return "la parola che hai scelto non è palindroma";
